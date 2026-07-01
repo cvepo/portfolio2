@@ -1,5 +1,4 @@
 import TopBar from "@/components/TopBar";
-import PlaceholderImage from "@/components/PlaceholderImage";
 import { User } from "lucide-react";
 
 const currentlyTags = [
@@ -7,12 +6,6 @@ const currentlyTags = [
   "swe intern @ onestream",
   "backend @ hack4impact",
   "apm @ cornell appdev",
-];
-
-const experience = [
-  { role: "OneStream — SWE Intern", date: "summer 2026" },
-  { role: "Hack4Impact — Backend Developer", date: "sep 2025 — present" },
-  { role: "Cornell App Dev — APM", date: "sep 2025 — present" },
 ];
 
 export default function About() {
@@ -38,7 +31,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="max-w-page mx-auto px-6 pb-8">
+      <div className="max-w-page mx-auto px-6 pb-16">
         <p className="font-mono text-[11px] text-warmgray mb-3">currently</p>
         <div className="flex gap-2 flex-wrap">
           {currentlyTags.map((tag) => (
@@ -48,24 +41,6 @@ export default function About() {
             >
               {tag}
             </span>
-          ))}
-        </div>
-      </div>
-
-      <div className="max-w-page mx-auto px-6 pb-16">
-        <div className="border-t border-hairline">
-          {experience.map((item) => (
-            <div
-              key={item.role}
-              className="flex justify-between py-3 border-b border-hairline"
-            >
-              <span className="font-sans text-[13px] text-ink">
-                {item.role}
-              </span>
-              <span className="font-mono text-xs text-warmgray">
-                {item.date}
-              </span>
-            </div>
           ))}
         </div>
       </div>

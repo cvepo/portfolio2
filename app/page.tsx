@@ -21,9 +21,10 @@ export default function Home() {
 
       <div className="max-w-page mx-auto px-6 pb-16">
         <div className="border-t border-hairline">
-          <TocRow label="Projects" page="02" href="/projects" />
-          <TocRow label="About" page="03" href="/about" />
-          <TocRow label="Contact" page="04" href="/contact" />
+          <TocRow label="About" page="02" href="/about" />
+          <TocRow label="Experiences" page="03" href="/experiences" />
+          <TocRow label="Projects" page="04" href="/projects" />
+          <TocRow label="Contact" page="05" href="/contact" />
         </div>
       </div>
     </main>
