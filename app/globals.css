@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FAF3E4;
+  color: #2A2430;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background-color: #D19A3E;
+  color: #FAF3E4;
+}
