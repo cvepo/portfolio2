@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import PageFrame from "@/components/PageFrame";
 import TopBar from "@/components/TopBar";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import { projects, getProject } from "@/data/projects";
@@ -18,28 +19,28 @@ export default function ProjectDetail({
   const total = projects.length.toString().padStart(2, "0");
 
   return (
-    <main className="min-h-screen">
+    <PageFrame>
       <TopBar
         left="← projects"
         leftHref="/projects"
         right={`${project.order} / ${total}`}
       />
 
-      <div className="max-w-page mx-auto px-6 pt-8">
+      <div className="px-6 sm:px-8 pt-6 pb-8">
         <h1 className="font-display font-semibold text-3xl sm:text-[34px] text-ink">
           {project.title}
         </h1>
-        <p className="font-display italic text-base text-plum mt-1 mb-6">
+        <p className="font-display italic text-base text-plum mt-2 mb-8">
           {project.hook}
         </p>
       </div>
 
-      <div className="max-w-page mx-auto px-6">
+      <div className="px-6 sm:px-8">
         <PlaceholderImage className="w-full h-56 sm:h-[260px]" iconSize={36} />
       </div>
 
-      <div className="max-w-page mx-auto px-6 py-9 flex flex-col sm:flex-row gap-8">
-        <div className="flex-[1.4] flex flex-col gap-4">
+      <div className="px-6 sm:px-8 py-10 pb-20 flex flex-col sm:flex-row gap-10">
+        <div className="flex-[1.4] flex flex-col gap-5">
           {project.body.map((paragraph, i) => (
             <p
               key={i}
@@ -50,7 +51,7 @@ export default function ProjectDetail({
           ))}
         </div>
 
-        <div className="flex-1 sm:border-l border-hairline sm:pl-6 flex flex-col gap-4 font-mono text-xs text-body">
+        <div className="flex-1 sm:border-l border-hairline sm:pl-8 flex flex-col gap-5 font-mono text-xs text-body">
           <div>
             <div className="text-warmgray text-[10px] mb-1">role</div>
             {project.role}
@@ -82,6 +83,6 @@ export default function ProjectDetail({
           )}
         </div>
       </div>
-    </main>
+    </PageFrame>
   );
 }

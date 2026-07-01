@@ -1,20 +1,21 @@
 import Link from "next/link";
+import PageFrame from "@/components/PageFrame";
 import TopBar from "@/components/TopBar";
 import PlaceholderImage from "@/components/PlaceholderImage";
 import { projects } from "@/data/projects";
 
 export default function ProjectsIndex() {
   return (
-    <main className="min-h-screen">
-      <TopBar left="← enzohiu.com" leftHref="/" right="index" wide />
+    <PageFrame wide>
+      <TopBar left="← enzohiu.com" leftHref="/" right="index" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-9 pb-2">
+      <div className="px-6 sm:px-8 lg:px-10 pt-6 pb-4">
         <h1 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-ink">
           Projects
         </h1>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pb-20 pt-8">
+      <div className="px-6 sm:px-8 lg:px-10 pb-20 pt-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {projects.map((project) => (
             <Link
@@ -46,6 +47,6 @@ export default function ProjectsIndex() {
           ))}
         </div>
       </div>
-    </main>
+    </PageFrame>
   );
 }
