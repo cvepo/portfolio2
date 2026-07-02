@@ -64,20 +64,34 @@ export default function ProjectDetail({
             <div className="text-warmgray text-[10px] mb-1">highlight</div>
             <span className="text-plum">{project.highlight}</span>
           </div>
-          {(project.liveUrl || project.githubUrl) && (
+          {(project.liveUrl ||
+            project.githubUrl ||
+            (project.links && project.links.length > 0)) && (
             <div>
               <div className="text-warmgray text-[10px] mb-1">links</div>
-              <span className="flex gap-3">
+              <span className="flex flex-col gap-2">
                 {project.liveUrl && (
                   <a href={project.liveUrl} className="text-plum hover:text-ink">
                     live ↗
                   </a>
                 )}
                 {project.githubUrl && (
-                  <a href={project.githubUrl} className="text-plum hover:text-ink">
+                  <a
+                    href={project.githubUrl}
+                    className="text-plum hover:text-ink"
+                  >
                     github ↗
                   </a>
                 )}
+                {project.links?.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-plum hover:text-ink"
+                  >
+                    {link.label} ↗
+                  </a>
+                ))}
               </span>
             </div>
           )}

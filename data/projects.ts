@@ -1,3 +1,8 @@
+export type ProjectLink = {
+  label: string;
+  href: string;
+};
+
 export type Project = {
   slug: string;
   order: string;
@@ -10,6 +15,7 @@ export type Project = {
   highlight: string;
   liveUrl?: string;
   githubUrl?: string;
+  links?: ProjectLink[];
 };
 
 export const projects: Project[] = [
@@ -26,39 +32,45 @@ export const projects: Project[] = [
     role: "Solo developer",
     stack: "TypeScript, Next.js, Postgres",
     highlight: "FIFO-accurate cost basis",
-    liveUrl: "#",
-    githubUrl: "#",
   },
   {
     slug: "uplift",
     order: "02",
     title: "Uplift",
-    hook: "a fitness engagement app for the Cornell community",
-    tags: ["react native"],
+    hook: "campus fitness app for Cornell's gym facilities",
+    tags: ["swiftui", "flask", "graphql"],
     body: [
-      "Uplift is a fitness engagement app built to get more of the Cornell community moving, with features designed around the way students actually use campus fitness spaces.",
+      "Uplift gives Cornell students a centralized place to check gym hours, real-time capacity, and fitness class schedules across campus facilities.",
+      "The app serves thousands of active users each semester and is maintained by a cross-functional team of engineers and PMs within Cornell AppDev. I joined as an Associate Product Manager, working across iOS and backend teams to prioritize features and ship iterative improvements.",
     ],
-    role: "Developer & designer",
-    stack: "React Native",
-    highlight: "Design-led feature work",
-    liveUrl: "#",
-    githubUrl: "#",
+    role: "Associate Product Manager",
+    stack: "SwiftUI, Flask, GraphQL, PostgreSQL, Xcode",
+    highlight: "400+ monthly active users across Cornell",
+    links: [
+      {
+        label: "github · ios",
+        href: "https://github.com/cuappdev/uplift-ios-swiftui",
+      },
+      {
+        label: "github · backend",
+        href: "https://github.com/cuappdev/uplift-backend",
+      },
+    ],
   },
   {
     slug: "chem",
     order: "03",
     title: "CHEM",
     hook: "endowment management, built for a real nonprofit client",
-    tags: ["ts", "fullstack"],
+    tags: ["next", "react", "prisma"],
     body: [
-      "CHEM is a fullstack endowment management platform built with Hack4Impact for a nonprofit client, handling transactions and contributor records across organizations.",
-      "Audited and patched org-ownership gaps across REST endpoints, closing a cross-tenant data exposure issue.",
+      "CHEM is a full-stack web application developed for a nonprofit client through Cornell Hack4Impact. It streamlines tracking of endowment funds, models allocation scenarios, and supports compliance reporting.",
+      "The platform replaces a manual, spreadsheet-based workflow with a structured dashboard. I audited and patched org-ownership gaps across REST endpoints, closing a cross-tenant data exposure issue.",
     ],
-    role: "Backend developer",
-    stack: "TypeScript, fullstack",
-    highlight: "Backend security audit",
-    liveUrl: "#",
-    githubUrl: "#",
+    role: "Maintenance Developer",
+    stack: "Next.js, React, Express.js, Prisma, TypeScript",
+    highlight: "In production for a live nonprofit client",
+    githubUrl: "https://github.com/cornellh4i/CHEM",
   },
 ];
 

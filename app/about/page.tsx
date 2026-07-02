@@ -5,8 +5,9 @@ import { User } from "lucide-react";
 const currentlyTags = [
   "studying @ cornell",
   "swe intern @ onestream",
-  "backend @ hack4impact",
   "apm @ cornell appdev",
+  "backend @ hack4impact",
+  "ai/ml fellow @ break through tech",
 ];
 
 export default function About() {
