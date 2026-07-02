@@ -1,16 +1,10 @@
 import PageFrame from "@/components/PageFrame";
 import TopBar from "@/components/TopBar";
+import { getCurrentlyTags } from "@/lib/currentlyTags";
 import { User } from "lucide-react";
 
-const currentlyTags = [
-  "studying @ cornell",
-  "swe intern @ onestream",
-  "apm @ cornell appdev",
-  "backend @ hack4impact",
-  "ai/ml fellow @ break through tech",
-];
-
 export default function About() {
+  const currentlyTags = getCurrentlyTags();
   return (
     <PageFrame>
       <TopBar left="← index" leftHref="/" right="about" />
