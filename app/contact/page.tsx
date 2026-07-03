@@ -38,7 +38,7 @@ const links = [
 export default function Contact() {
   return (
     <PageFrame>
-      <TopBar left="← index" leftHref="/" right="contact" />
+      <TopBar left="← enzohiu.com" leftHref="/" right="contact" />
 
       <div className="px-6 sm:px-8 pt-8 pb-4">
         <h1 className="font-display font-semibold text-4xl text-ink mb-3">

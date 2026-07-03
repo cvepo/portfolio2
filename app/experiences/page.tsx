@@ -23,7 +23,7 @@ function RoleList({ items }: { items: { role: string; date: string }[] }) {
 export default function Experiences() {
   return (
     <PageFrame>
-      <TopBar left="← index" leftHref="/" right="experiences" />
+      <TopBar left="← enzohiu.com" leftHref="/" right="experiences" />
 
       <div className="px-6 sm:px-8 pt-6 pb-10">
         <h1 className="font-display font-semibold text-3xl sm:text-4xl text-ink">

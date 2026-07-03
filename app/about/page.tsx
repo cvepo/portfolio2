@@ -1,29 +1,42 @@
+import Image from "next/image";
 import PageFrame from "@/components/PageFrame";
 import TopBar from "@/components/TopBar";
 import { getCurrentlyTags } from "@/lib/currentlyTags";
-import { User } from "lucide-react";
 
 export default function About() {
   const currentlyTags = getCurrentlyTags();
   return (
     <PageFrame>
-      <TopBar left="← index" leftHref="/" right="about" />
+      <TopBar left="← enzohiu.com" leftHref="/" right="about" />
 
       <div className="px-6 sm:px-8 pt-6 pb-10 flex flex-col sm:flex-row gap-6 sm:gap-8 items-start">
-        <div className="w-28 h-28 rounded-lg bg-placeholder flex items-center justify-center shrink-0">
-          <User size={28} className="text-warmgray" strokeWidth={1.5} />
+        <div className="relative w-32 h-32 rounded-lg overflow-hidden shrink-0 bg-placeholder">
+          <Image
+            src="/headshot.jpg"
+            alt="Enzo Hiu"
+            fill
+            className="object-cover object-top"
+            sizes="128px"
+            priority
+          />
         </div>
         <div>
           <h1 className="font-display font-semibold text-3xl text-ink mb-3">
             About
           </h1>
-          <p className="font-sans text-sm text-body leading-relaxed">
-            I&apos;m a sophomore studying CS at Cornell, currently interning
-            as a SWE at OneStream. Most of what&apos;s on this site started
-            as a small idea that got a little out of hand — a card tracker
-            that grew a real accounting engine, a fitness app that turned
-            into a whole engagement system.
-          </p>
+          <div className="font-sans text-sm text-body leading-relaxed space-y-4">
+            <p>
+              I&apos;m a junior studying CS at Cornell and I like building
+              things that are useful, clean, and maybe a little overthought
+              in the best way.
+            </p>
+            <p>
+              I started at community college before transferring to Cornell,
+              so a lot of my path has been figuring things out as I go. In my
+              free time I&apos;m usually trying new restaurants, cooking for
+              friends, or snowboarding.
+            </p>
+          </div>
         </div>
       </div>
 
