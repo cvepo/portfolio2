@@ -3,11 +3,11 @@ const SCHOOL_YEAR_START = { month: 8, day: 24 }; // August 24
 const SCHOOL_YEAR_END = { month: 5, day: 31 }; // May 31
 
 const SUMMER_TAGS = [
-  "swe intern @ onestream",
-  "ai/ml fellow @ break through tech",
+  "swe intern · onestream",
+  "ai/ml fellow · break through tech",
   "beli maxxing",
 ];
-const SCHOOL_TAGS = ["studying @ cornell", "pm @ cornell appdev"];
+const SCHOOL_TAGS = ["studying · cornell", "pm · cornell appdev"];
 
 function isSchoolYear(date: Date): boolean {
   const month = date.getMonth() + 1;

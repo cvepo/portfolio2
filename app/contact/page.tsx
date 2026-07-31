@@ -1,6 +1,6 @@
 import PageFrame from "@/components/PageFrame";
 import TopBar from "@/components/TopBar";
-import { Mail, Linkedin, Github, Instagram, Calendar } from "lucide-react";
+import { Mail, Linkedin, Github, Calendar } from "lucide-react";
 
 const links = [
   {
@@ -27,12 +27,6 @@ const links = [
     href: "https://calendly.com/enzohiu06/30min",
     Icon: Calendar,
   },
-  {
-    label: "instagram",
-    value: "@hiuenzo",
-    href: "https://instagram.com/hiuenzo",
-    Icon: Instagram,
-  },
 ];
 
 export default function Contact() {
@@ -45,7 +39,7 @@ export default function Contact() {
           Let&apos;s talk.
         </h1>
         <p className="font-sans text-sm text-body max-w-[380px] leading-relaxed">
-          Open to conversations about software, sports, or anything else —
+          Open to conversations about tech, recipes, or anything else —
           reach out anytime.
         </p>
       </div>
