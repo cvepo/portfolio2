@@ -17,7 +17,7 @@ export const previousRoles: Role[] = [
     date: "summer 2025",
   },
   {
-    role: "U.S. Department of Justice · CRS · Operations Intern",
+    role: "U.S. Department of Justice (CRS) · Operations Intern",
     date: "spring 2025",
   },
 ];
