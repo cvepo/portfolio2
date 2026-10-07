@@ -18,7 +18,9 @@ const nextConfig = {
       beforeFiles: [
         { source: '/recruitingos', destination: `${RECRUITINGOS}/recruitingos/` },
         { source: '/recruitingos/:path*', destination: `${RECRUITINGOS}/recruitingos/:path*` },
-        { source: '/pokefolio', destination: `${POKEFOLIO}/pokefolio/` },
+        // No trailing slash. The app 308s `/pokefolio/` back to `/pokefolio`,
+        // and this rewrite would send that straight back — an infinite loop.
+        { source: '/pokefolio', destination: `${POKEFOLIO}/pokefolio` },
         { source: '/pokefolio/:path*', destination: `${POKEFOLIO}/pokefolio/:path*` },
         { source: '/memorizer', destination: `${MEMORIZER}/memorizer` },
         { source: '/memorizer/:path*', destination: `${MEMORIZER}/memorizer/:path*` },
