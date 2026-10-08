@@ -1,51 +1,36 @@
-# enzohiu.com
+# Enzo Hiu’s portfolio
 
-Next.js (App Router) + TypeScript + Tailwind. Warm editorial design system:
-Fraunces (display serif), Inter (body sans), IBM Plex Mono (utility mono),
-on a butter-and-plum palette.
+A single-page portfolio built with Next.js 14, React, TypeScript, and Tailwind CSS. Fraunces, Inter, and IBM Plex Mono sit on a warm paper and muted green palette.
 
-## Getting started
+## Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000.
+Open http://localhost:3000. Run `npx tsc --noEmit` for type checking and `npm run build` for the production build.
 
-## Structure
+## Editing the portfolio
 
-- `app/page.tsx` — home (name, bio, dotted table-of-contents nav)
-- `app/projects/page.tsx` — projects index
-- `app/projects/[slug]/page.tsx` — individual project case study template
-- `app/about/page.tsx` — about
-- `app/contact/page.tsx` — contact
-- `data/projects.ts` — **all project content lives here.** Edit this file to
-  add/remove/update projects — no need to touch any page files.
-- `components/PlaceholderImage.tsx` — swap this out once you have real
-  screenshots (see below).
-- `tailwind.config.ts` — color tokens (`butter`, `sand`, `ink`, `plum`,
-  `mustard`, `warmgray`, `body`, `hairline`).
+- `data/portfolio.ts` contains the six projects, destinations, screenshots, and social links.
+- `app/page.tsx` contains the introduction, project sections, and contact section.
+- `components/IosAppCard.tsx` presents the campus apps.
+- `components/WebsiteCard.tsx` presents web projects and compact project entries.
+- `components/ProjectGallery.tsx` provides accessible screenshot selectors.
+- `components/ContactLinks.tsx` displays GitHub, LinkedIn, and email buttons in the header and contact section. `CopyEmail.tsx` copies the email address, with a selectable address as a fallback when clipboard access is unavailable.
+- `app/globals.css` contains the responsive layout, hover states, focus styles, and reduced-motion rules.
+- `app/layout.tsx` configures fonts and search/social metadata.
+- `public/projects/` contains project images. Include the actual image dimensions and descriptive alt text when adding screenshots.
 
-## Swapping in real project images
+The mobile layout stacks project cards. Booked uses four complete promotional panels in order inside one rounded frame, with all four visible at every screen size. Web screenshots retain their full contents, and view buttons switch between the supplied screenshots without navigation.
 
-Every image slot currently renders `<PlaceholderImage />`. To use a real
-screenshot:
+## Public access
 
-1. Drop the image in `public/` (e.g. `public/pokefolio.png`).
-2. Replace the `<PlaceholderImage className="..." />` usage with
-   `<Image src="/pokefolio.png" alt="..." fill className="object-cover rounded-md" />`
-   from `next/image` (wrap in a `relative` container since it's using `fill`).
+The portfolio is public and does not require a password. The former `/unlock` page redirects to the homepage so existing bookmarks still work.
 
-## To fill in before shipping
+## Live demos
 
-- `data/projects.ts` — `liveUrl` / `githubUrl` are placeholder `#` links
-- `app/contact/page.tsx` — email/social links are placeholders, confirm handles
-- `app/about/page.tsx` — experience dates are estimates, confirm against your resume
-- Real screenshots for all five projects and (optionally) a headshot for `/about`
+`next.config.js` proxies `/pokefolio`, `/recruitingos`, and the legacy `/memorizer` route to their existing Vercel projects, including nested routes and assets. Those apps are maintained and deployed separately. Pokéfolio links directly to `/pokefolio/demo`, RecruitingOS links to `/recruitingos`, and Memorizer links to its GitHub repository.
 
-## Deploying
-
-This is already Vercel-ready. Push to a GitHub repo, import it in Vercel,
-and point `enzohiu.com`'s DNS at Vercel the same way you set up vepo.studio
-previously (A record `@` → Vercel's IP, CNAME `www` → `cname.vercel-dns.com`).
+`_archive/` preserves the earlier multipage design and is excluded from TypeScript checking. `data/projects.ts` is legacy content; edit `data/portfolio.ts` for the current site.

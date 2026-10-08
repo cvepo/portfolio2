@@ -25,8 +25,17 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Enzo Hiu",
-  description: "CS @ Cornell. Incoming SWE at OneStream.",
+  metadataBase: new URL("https://www.enzohiu.com"),
+  title: "Enzo Hiu — Software & Product",
+  description:
+    "Enzo Hiu is a computer science student at Cornell. View projects for study room reservations, campus fitness, collection tracking, and job applications.",
+  openGraph: {
+    title: "Enzo Hiu — Software & Product",
+    description: "Web and iOS projects by Enzo Hiu, a computer science student at Cornell. Apps for campus services, collection tracking, studying, and job applications.",
+    url: "/",
+    siteName: "Enzo Hiu",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

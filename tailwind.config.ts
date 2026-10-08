@@ -8,6 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        canvas: "#F4F1EC",
         butter: "#FAF3E4",
         sand: "#F2E7C9",
         ink: "#2A2430",
