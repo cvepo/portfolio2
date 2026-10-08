@@ -12,6 +12,10 @@ const POKEFOLIO = 'https://pokefolio-xi.vercel.app';
 // built under the /memorizer base path; serve it at www.enzohiu.com/memorizer.
 const MEMORIZER = 'https://memorizer-gamma.vercel.app';
 
+// Hippo (github.com/cvepo/hippo) is likewise a separate Vercel project
+// built under the /hippo base path; serve it at www.enzohiu.com/hippo.
+const HIPPO = 'https://hippo-sable.vercel.app';
+
 const nextConfig = {
   async rewrites() {
     return {
@@ -24,6 +28,8 @@ const nextConfig = {
         { source: '/pokefolio/:path*', destination: `${POKEFOLIO}/pokefolio/:path*` },
         { source: '/memorizer', destination: `${MEMORIZER}/memorizer` },
         { source: '/memorizer/:path*', destination: `${MEMORIZER}/memorizer/:path*` },
+        { source: '/hippo', destination: `${HIPPO}/hippo/` },
+        { source: '/hippo/:path*', destination: `${HIPPO}/hippo/:path*` },
       ],
     };
   },
