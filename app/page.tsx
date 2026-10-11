@@ -14,8 +14,7 @@ export default function Home() {
       <div className="page-shell" id="top">
         <header className="site-header">
           <a href="#top" className="wordmark" aria-label="Enzo Hiu, back to top">eh<span>.</span></a>
-          <nav aria-label="Main navigation">
-            <a href="#work">Projects</a>
+          <nav aria-label="Contact links">
             <ContactLinks compact />
           </nav>
         </header>
@@ -29,15 +28,11 @@ export default function Home() {
             <div className="intro-note">
               <p>I build web applications<br />and work on mobile products.</p>
               <p className="intro-description">My projects include apps for reserving study rooms, checking gym schedules, tracking collections, and managing job applications.</p>
-              <a href="#work" className="text-link">View projects <span className="arrow-down"><Arrow /></span></a>
             </div>
           </section>
 
           <section id="work" aria-labelledby="work-title" className="work-section">
-            <div className="section-heading">
-              <h2 id="work-title">Selected projects</h2>
-              <span className="eyebrow">Web and iOS applications <span className="work-count">{String(iosProjects.length + webProjects.length).padStart(2, "0")}</span></span>
-            </div>
+            <h2 id="work-title" className="sr-only">Projects</h2>
             <div className="app-grid">
               {iosProjects.map((project) => <IosAppCard key={project.title} project={project} />)}
             </div>

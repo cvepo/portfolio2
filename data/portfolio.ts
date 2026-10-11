@@ -42,7 +42,7 @@ export const iosProjects: IosProject[] = [
     title: "Booked",
     summary: "An iOS app for finding and reserving study rooms at Cornell. Browse libraries, check room details, and manage reservations.",
     href: "https://github.com/cuappdev/booked",
-    meta: "Launching soon",
+    meta: "Launching Fall 2026",
     category: "Study room reservations",
     features: "Libraries, room details, and reservations",
     linkLabel: "View Booked on GitHub",

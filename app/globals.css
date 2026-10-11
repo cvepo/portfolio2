@@ -22,9 +22,7 @@ button { font: inherit; }
 .site-header { display: flex; align-items: center; justify-content: space-between; padding: 28px 0; border-bottom: 1px solid var(--line); }
 .wordmark { font-family: var(--font-fraunces), Georgia, serif; font-size: 32px; font-weight: 500; line-height: 1; letter-spacing: -2px; }
 .wordmark span { color: var(--green); }
-.site-header nav { display: flex; align-items: center; gap: 32px; font-size: 12px; }
-.site-header nav > a { display: inline-flex; align-items: center; gap: 7px; padding: 8px 0; }
-.site-header nav > a:hover { color: var(--green); text-decoration: underline; text-underline-offset: 6px; }
+.site-header nav { display: flex; align-items: center; }
 .contact-links { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
 .contact-links-compact { flex-wrap: nowrap; gap: 8px; }
 .social-button { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; gap: 10px; padding: 10px 15px; border: 1px solid var(--line); border-radius: 9px; background: #fffdfa80; color: var(--ink); font-size: 12px; line-height: 1.5; cursor: pointer; transition: background .2s, border-color .2s; }
@@ -46,13 +44,7 @@ button { font: inherit; }
 .text-link:hover { color: var(--green); border-color: var(--green); }
 .text-link svg { width: 15px; height: 15px; transition: transform .2s; }
 .text-link:hover > svg { transform: translate(2px, -2px); }
-.intro-note .text-link { margin-top: 18px; }
-.arrow-down, .arrow-up { display: inline-flex; transform: rotate(90deg); }
-.arrow-up { transform: rotate(-90deg); }
-.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 0; border-top: 1px solid var(--line); }
-.section-heading h2 { font-size: 12px; font-weight: 500; }
-.section-heading > span { font-size: 9px; letter-spacing: .035em; }
-.work-count { display: inline-block; margin-left: 16px; border: 1px solid var(--line); padding: 1px 7px; border-radius: 20px; }
+.arrow-up { display: inline-flex; transform: rotate(-90deg); }
 .app-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; }
 .app-project { min-width: 0; }
 .app-preview { position: relative; display: flex; flex-direction: column; justify-content: space-between; height: 390px; overflow: hidden; border-radius: 5px; isolation: isolate; }
@@ -139,9 +131,6 @@ button { font: inherit; }
   .intro-note { justify-self: start; max-width: 440px; padding-top: 0; }
   .intro-note > p:first-child { font-size: 25px; }
   .intro-description { max-width: 340px; }
-  .intro-note .text-link { margin-top: 12px; }
-  .section-heading > span { font-size: 8px; }
-  .work-count { margin-left: 8px; }
   .app-grid { grid-template-columns: 1fr; gap: 36px; }
   .app-preview { height: 390px; }
   .app-project-uplift .phone-lineup { padding: 0 55px; gap: 28px; }
@@ -162,11 +151,8 @@ button { font: inherit; }
 
 @media (max-width: 420px) {
   .page-shell { padding: 0 20px; }
-  .site-header nav { gap: 16px; font-size: 12px; }
   .intro h1 { font-size: 79px; }
   .intro-kicker { font-size: 9px; }
-  .section-heading > .eyebrow { font-size: 0; }
-  .work-count { font-size: 9px; }
   .app-preview { height: 310px; }
   .preview-heading { font-size: 19px; padding: 20px 18px 0; }
   .app-project-booked .app-preview { padding: 4px; border-radius: 10px; }
